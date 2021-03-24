@@ -1,18 +1,20 @@
-import {
-  Container,
-  Stack,
-  Flex,
-  Heading,
-  Text,
-  Button,
-} from '@chakra-ui/react';
 import { Layout } from '../components/Layout';
-import { Navbar } from '../components/Navbar';
+import { Hero } from '../components/Hero';
 
 export default function Home() {
+  const heroProps = {
+    title: "I'm Joemel Bituin",
+    subtitle:
+      'Web Developer with almost 2 years of experience. Experienced with all stages of the development cycle for dynamic web',
+    image: 'https://source.unsplash.com/AWtfHYmRCP8/800x600',
+    ctaText: 'Download Resume',
+    ctaLink: '/signup',
+  };
+
   return (
     <Layout>
-      <Container maxW='xl' centerContent>
+      <Hero {...heroProps} />
+      {/* <Container maxW='xl' centerContent>
         {' '}
         <Stack
           minH={'85vh'}
@@ -53,23 +55,10 @@ export default function Home() {
                 with all stages of the development cycle for dynamic web
                 projects.
               </Text>
-              {/* <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
-                <Button
-                  rounded={'full'}
-                  colorScheme='tomato'
-                  color={'tomato'}
-                  variant='outline'
-                  _hover={{
-                    bg: 'tomato.200',
-                  }}
-                >
-                  Download Resume
-                </Button>
-              </Stack> */}
             </Stack>
           </Flex>
         </Stack>
-      </Container>
+      </Container> */}
     </Layout>
   );
 }
