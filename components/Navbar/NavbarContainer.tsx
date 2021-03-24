@@ -1,8 +1,8 @@
-import { Flex } from '@chakra-ui/react';
+import { Flex, Box } from '@chakra-ui/react';
 
 export const NavbarContainer: React.FC = ({ children, ...props }) => {
   return (
-    <header>
+    <Box w='100%'>
       <Flex
         as='nav'
         align='center'
@@ -16,6 +16,6 @@ export const NavbarContainer: React.FC = ({ children, ...props }) => {
       >
         {children}
       </Flex>
-    </header>
+    </Box>
   );
 };
