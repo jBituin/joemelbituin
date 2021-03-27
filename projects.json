@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Fume",
+    "description": "Expense tracker for your wheels",
+    "repoUrl": "https://github.com/jBituin/fume"
+  },
+  {
+    "name": "Scrn Rcrd",
+    "description": "Desktop screen recorder",
+    "repoUrl": "https://github.com/jBituin/desktop-screen-capturer"
+  },
+  {
+    "name": "Wee-URL",
+    "description": "Uniform Resource Locator shortener",
+    "repoUrl": "https://github.com/jBituin/wee-url"
+  }
+]
