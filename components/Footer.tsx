@@ -1,13 +1,14 @@
 import { Box, Text, Icon } from '@chakra-ui/react';
 import { FiHeart } from 'react-icons/fi';
 
-export const Footer: React.FC = () => {
+export const Footer: React.FC = ({ ...rest }) => {
   return (
     <Box
       maxHeight={60}
       display='flex'
       justifyContent='center'
       alignItems='center'
+      {...rest}
     >
       <Text>
         Made with <Icon as={FiHeart} color='red' fill='red'></Icon> by &nbsp;

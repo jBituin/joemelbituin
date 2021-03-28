@@ -8,6 +8,7 @@ export const Layout: React.FC = ({ children, ...rest }) => (
     align='center'
     maxW={{ xl: '1200px' }}
     m='0 auto'
+    w='100%'
     {...rest}
   >
     <Navbar color='black' bg='white' />
