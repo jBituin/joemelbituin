@@ -18,8 +18,6 @@ export const MenuItem: React.FC<Props> = ({
   ...rest
 }) => {
   const getText = () => {
-    console.log('isActive :>> ', isActive);
-    console.log('to :>> ', to);
     if (isActive) {
       return (
         <Text fontWeight='bold' color='tomato'>
@@ -27,7 +25,11 @@ export const MenuItem: React.FC<Props> = ({
         </Text>
       );
     }
-    return <Text>{children}</Text>;
+    return (
+      <Text fontWeight='normal' color='black'>
+        {children}
+      </Text>
+    );
   };
   return (
     <Link href={to}>
