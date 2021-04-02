@@ -12,7 +12,11 @@ export const Logo: React.FC<Props> = (props) => {
   const avatarImageName = 'Joemel Bituin';
   return (
     <Box {...props}>
-      <Avatar name={avatarImageName} src={avatarImageUrl}></Avatar>
+      <Avatar
+        border='2px solid tomato'
+        name={avatarImageName}
+        src={avatarImageUrl}
+      ></Avatar>
     </Box>
   );
 };
