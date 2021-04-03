@@ -24,13 +24,13 @@ export const Hero: React.FC = ({ ...rest }) => {
       justify={{ base: 'center', md: 'space-around', xl: 'space-between' }}
       direction={{ base: 'column-reverse', md: 'row' }}
       wrap='nowrap'
-      minH='70vh'
+      minH='80vh'
       width='100%'
       px={8}
       mb={16}
       backgroundImage={{ xl: 'url(../development.svg)' }}
       backgroundRepeat='no-repeat'
-      backgroundPosition={'right 1rem bottom'}
+      backgroundPosition={'right bottom 5.5rem'}
       backgroundSize='50%'
       {...rest}
     >
