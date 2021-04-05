@@ -33,9 +33,9 @@ const features = [
 
 export const About: React.FC = () => {
   return (
-    <Container maxW={'8xl'} minH='100%' py={12}>
+    <Container maxW={'8xl'} minH='100%' py={32}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-        <Stack spacing={4}>
+        <Stack spacing={20}>
           <Text
             textTransform={'uppercase'}
             color={'blue.400'}
@@ -50,7 +50,7 @@ export const About: React.FC = () => {
           </Text>
           <Heading>Get a closer look at who I am.</Heading>
           <Stack
-            spacing={4}
+            spacing={20}
             divider={
               <StackDivider
                 borderColor={useColorModeValue('gray.100', 'gray.700')}
@@ -58,13 +58,17 @@ export const About: React.FC = () => {
             }
           >
             {features.map((feature, idx) => (
-              <HStack key={idx} align={'top'}>
+              <HStack key={idx} align={'top'} spacing={4}>
                 <Box color={'green.400'} px={2}>
                   <Icon as={feature.icon} />
                 </Box>
                 <VStack align={'start'}>
-                  <Text fontWeight={600}>{feature.title}</Text>
-                  <Text color={'gray.600'}>{feature.text}</Text>
+                  <Heading size='md' fontWeight={600}>
+                    {feature.title}
+                  </Heading>
+                  <Text pt='10' color={'gray.600'}>
+                    {feature.text}
+                  </Text>
                 </VStack>
               </HStack>
             ))}
