@@ -12,21 +12,59 @@ import {
   HStack,
   Box,
   VStack,
+  useBreakpointValue,
 } from '@chakra-ui/react';
-import { IoFingerPrint, IoLaptopOutline } from 'react-icons/io5';
+import {
+  IoFingerPrint,
+  IoLaptopOutline,
+  IoLogoVue,
+  IoLogoReact,
+  IoLogoHtml5,
+  IoLogoCss3,
+  IoLogoGithub,
+  IoLogoNodejs,
+  IoLocation,
+} from 'react-icons/io5';
 
 const features = [
   {
     title: 'Who Am I',
-    text: `I'm Joemel Bituin, 21 years old and from Philippines.\n
-    Digital design has been an interest of mine for many years, and I work with anything from logo design to UI design and front-end development.
-    All the skills and tools I use, are self-taught over many years of practice and expanding my horizons.`,
+    contents: [
+      {
+        title: `I'm Joemel Bituin, 21 years old and from Philippines`,
+        icon: IoLocation,
+      },
+    ],
     icon: IoFingerPrint,
   },
   {
     title: 'Skills and Tools',
-    text:
-      'Development: JavaScript, React, Next.js, HTML, CSS/SCSS, TailwindCSS, WordPress',
+    contents: [
+      {
+        title: 'Vue',
+        icon: IoLogoVue,
+      },
+      {
+        title: 'Node',
+        icon: IoLogoNodejs,
+      },
+      {
+        title: 'React',
+        icon: IoLogoReact,
+      },
+      {
+        title: 'HTML5',
+        icon: IoLogoHtml5,
+      },
+      {
+        title: 'CSS',
+        icon: IoLogoCss3,
+      },
+      {
+        title: 'Git',
+        icon: IoLogoGithub,
+      },
+    ],
     icon: IoLaptopOutline,
   },
 ];
@@ -48,7 +86,35 @@ export const About: React.FC = () => {
           >
             About
           </Text>
-          <Heading>Get a closer look at who I am.</Heading>
+          {/* <Heading
+            position='relative'
+            _before={{
+              content: "''",
+              width: '10%',
+              height: '20%',
+              position: 'absolute',
+              bottom: 10,
+              left: -20,
+              bg: 'red.400',
+              zIndex: -1,
+            }}
+          >
+            Get a closer look at who I am.
+          </Heading> */}
+          <Heading
+            lineHeight={1.1}
+            fontSize={{ base: '3xl', sm: '4xl', md: '5xl', lg: '6xl' }}
+          >
+            Get a closer look{' '}
+            <Text
+              as={'span'}
+              bgGradient='linear(to-r, red.400,pink.400)'
+              bgClip='text'
+            >
+              at
+            </Text>{' '}
+            who I am.{' '}
+          </Heading>
           <Stack
             spacing={20}
             divider={
@@ -66,9 +132,14 @@ export const About: React.FC = () => {
                   <Heading size='md' fontWeight={600}>
                     {feature.title}
                   </Heading>
-                  <Text pt='10' color={'gray.600'}>
-                    {feature.text}
-                  </Text>
+                  {feature.contents.map((content) => (
+                    <HStack align={'start'} key={content.title}>
+                      <Box color={'green.400'} px={2}>
+                        <Icon as={content.icon} />
+                      </Box>
+                      <Text>{content.title}</Text>
+                    </HStack>
+                  ))}
                 </VStack>
               </HStack>
             ))}
