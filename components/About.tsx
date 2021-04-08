@@ -103,7 +103,7 @@ export const About: React.FC = () => {
           </Heading> */}
           <Heading
             lineHeight={1.1}
-            fontSize={{ base: '3xl', sm: '4xl', md: '5xl', lg: '6xl' }}
+            fontSize={{ base: '2xl', sm: '3xl', md: '4xl', lg: '5xl' }}
           >
             Get a closer look{' '}
             <Text
