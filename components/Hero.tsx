@@ -9,14 +9,6 @@ import {
   Text,
 } from '@chakra-ui/react';
 
-// const heroProps = {
-//   title: "Hey, I'm Joemel",
-//   subtitle: 'a full stack developer with 2 years of experience.',
-//   image: 'https://source.unsplash.com/AWtfHYmRCP8/800x600',
-//   ctaText: 'Know More',
-//   ctaLink: '/signup',
-// };
-
 export const Hero: React.FC = ({ ...rest }) => {
   return (
     <Flex
