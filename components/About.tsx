@@ -12,95 +12,27 @@ import {
   HStack,
   Box,
   VStack,
-  useBreakpointValue,
 } from '@chakra-ui/react';
-import {
-  IoFingerPrint,
-  IoLaptopOutline,
-  IoLogoVue,
-  IoLogoReact,
-  IoLogoHtml5,
-  IoLogoCss3,
-  IoLogoGithub,
-  IoLogoNodejs,
-  IoLocation,
-} from 'react-icons/io5';
 
-const features = [
-  {
-    title: 'Who Am I',
-    contents: [
-      {
-        title: `I'm Joemel Bituin, 21 years old and from Philippines`,
-        icon: IoLocation,
-      },
-    ],
-    icon: IoFingerPrint,
-  },
-  {
-    title: 'Skills and Tools',
-    contents: [
-      {
-        title: 'Vue',
-        icon: IoLogoVue,
-      },
-      {
-        title: 'Node',
-        icon: IoLogoNodejs,
-      },
-      {
-        title: 'React',
-        icon: IoLogoReact,
-      },
-      {
-        title: 'HTML5',
-        icon: IoLogoHtml5,
-      },
-      {
-        title: 'CSS',
-        icon: IoLogoCss3,
-      },
-      {
-        title: 'Git',
-        icon: IoLogoGithub,
-      },
-    ],
-    icon: IoLaptopOutline,
-  },
-];
+import { IntroLine } from './IntroLine';
 
 export const About: React.FC = () => {
   return (
     <Container maxW={'8xl'} minH='100%' py={32}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         <Stack spacing={20}>
-          <Text
-            textTransform={'uppercase'}
-            color={'blue.400'}
-            fontWeight={600}
-            fontSize={'sm'}
-            bg={useColorModeValue('blue.50', 'blue.900')}
-            p={2}
-            alignSelf={'flex-start'}
-            rounded={'md'}
-          >
-            About
-          </Text>
-          {/* <Heading
-            position='relative'
-            _before={{
-              content: "''",
-              width: '10%',
-              height: '20%',
-              position: 'absolute',
-              bottom: 10,
-              left: -20,
-              bg: 'red.400',
-              zIndex: -1,
-            }}
-          >
-            Get a closer look at who I am.
-          </Heading> */}
+          <Flex direction='row' alignItems='center'>
+            <IntroLine w='3rem' h='1' />
+            <Heading
+              HeadingTransform={'uppercase'}
+              fontWeight={600}
+              fontSize={'md'}
+              alignSelf={'flex-start'}
+              rounded={'md'}
+            >
+              About
+            </Heading>
+          </Flex>
           <Heading
             lineHeight={1.1}
             fontSize={{ base: '2xl', sm: '3xl', md: '4xl', lg: '5xl' }}
@@ -115,34 +47,50 @@ export const About: React.FC = () => {
             </Text>{' '}
             who I am.{' '}
           </Heading>
-          <Stack
-            spacing={20}
-            divider={
-              <StackDivider
-                borderColor={useColorModeValue('gray.100', 'gray.700')}
-              />
-            }
-          >
-            {features.map((feature, idx) => (
-              <HStack key={idx} align={'top'} spacing={4}>
-                <Box color={'green.400'} px={2}>
-                  <Icon as={feature.icon} />
-                </Box>
-                <VStack align={'start'}>
+          <Stack spacing={20}>
+            <HStack align={'top'} spacing={4}>
+              <VStack align={'start'}>
+                <Flex direction='row' alignItems='center'>
+                  <IntroLine w='1rem' h='1' />
                   <Heading size='md' fontWeight={600}>
-                    {feature.title}
+                    Who Am I
                   </Heading>
-                  {feature.contents.map((content) => (
-                    <HStack align={'start'} key={content.title}>
-                      <Box color={'green.400'} px={2}>
-                        <Icon as={content.icon} />
-                      </Box>
-                      <Text>{content.title}</Text>
-                    </HStack>
-                  ))}
+                </Flex>
+                <VStack align={'start'}>
+                  <Text as='p'>
+                    I'm Joemel Bituin, 21 years old and from Philippines
+                  </Text>
+                  <Text as='p'>
+                    I enjoy creating high-quality software products with a
+                    complex logic behind it. My main technology stack includes
+                    Vue, React, and Node
+                  </Text>
+                  <Text as='p'>
+                    I enjoy reading novels, watch movies, and listen to music.
+                  </Text>
                 </VStack>
-              </HStack>
-            ))}
+              </VStack>
+            </HStack>
+
+            <HStack align={'top'} spacing={4}>
+              <VStack align={'start'}>
+                <Flex direction='row' alignItems='center'>
+                  <IntroLine w='1rem' h='1' />
+                  <Heading size='md' fontWeight={600}>
+                    Skills and Tools
+                  </Heading>
+                </Flex>
+                <VStack align={'start'}>
+                  <Text as='p'>
+                    Front-End: Vue/Nuxt, React/Next, ChakraUI, HTML, CSS
+                  </Text>
+                  <Text as='p'>
+                    Back-End: Node, Rest API Development/Third Party Integration
+                  </Text>
+                  <Text as='p'>Version Control: Git</Text>
+                </VStack>
+              </VStack>
+            </HStack>
           </Stack>
         </Stack>
         {/* <Flex>
