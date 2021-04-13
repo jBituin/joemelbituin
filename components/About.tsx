@@ -6,11 +6,7 @@ import {
   Heading,
   Text,
   Stack,
-  StackDivider,
-  Icon,
-  useColorModeValue,
   HStack,
-  Box,
   VStack,
 } from '@chakra-ui/react';
 
@@ -20,7 +16,7 @@ export const About: React.FC = () => {
   return (
     <Container maxW={'8xl'} minH='100%' py={32}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-        <Stack spacing={20}>
+        <Stack spacing='20'>
           <Flex direction='row' alignItems='center'>
             <IntroLine w='3rem' h='1' />
             <Heading
@@ -93,15 +89,17 @@ export const About: React.FC = () => {
             </HStack>
           </Stack>
         </Stack>
-        {/* <Flex>
+        <Flex alignItems='center' p='3rem'>
           <Image
-            rounded={'md'}
-            alt={'feature image'}
-            src={
-              'https://images.unsplash.com/photo-1554200876-56c2f25224fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
-            }
+            maxWidth='500'
+            width='500'
+            height='500'
+            borderRadius='full'
+            margin='auto'
+            alt={'Joemel Bituin'}
+            src={'joemel.jpg'}
           />
-        </Flex> */}
+        </Flex>
       </SimpleGrid>
     </Container>
   );
