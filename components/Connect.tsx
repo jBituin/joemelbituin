@@ -1,18 +1,12 @@
 import {
   Container,
   SimpleGrid,
-  Image,
   Flex,
   Heading,
   Text,
   Stack,
-  StackDivider,
-  Icon,
-  useColorModeValue,
   HStack,
-  Box,
   VStack,
-  useBreakpointValue,
 } from '@chakra-ui/react';
 import { IntroLine } from './IntroLine';
 
