@@ -39,9 +39,9 @@ export const About: React.FC = () => {
               bgGradient='linear(to-r, red.400,pink.400)'
               bgClip='text'
             >
-              at
-            </Text>{' '}
-            who I am.{' '}
+              at{' '}
+            </Text>
+            who I am.
           </Heading>
           <Stack spacing={20}>
             <HStack align={'top'} spacing={4}>
@@ -81,7 +81,7 @@ export const About: React.FC = () => {
                     Front-End: Vue/Nuxt, React/Next, ChakraUI, HTML, CSS
                   </Text>
                   <Text as='p'>
-                    Back-End: Node, Rest API Development/Third Party Integration
+                    Back-End: Node, Rest API Development, MySQL, MongoDB
                   </Text>
                   <Text as='p'>Version Control: Git</Text>
                 </VStack>
