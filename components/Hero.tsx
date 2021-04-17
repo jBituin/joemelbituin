@@ -16,16 +16,19 @@ export const Hero: React.FC = ({ ...rest }) => {
       justify={{ base: 'center', md: 'space-around', xl: 'space-between' }}
       direction={{ base: 'column-reverse', md: 'row' }}
       wrap='nowrap'
-      minH='80vh'
       width='100%'
-      px={8}
-      mb={16}
-      backgroundImage={{ xl: 'url(../development.svg)' }}
-      backgroundRepeat='no-repeat'
-      backgroundPosition={'right bottom 5.5rem'}
-      backgroundSize='50%'
+      my='4rem'
       {...rest}
     >
+      <Text
+        fontSize={['100px', '200px', '300px']}
+        position='fixed'
+        opacity='0.1'
+        mt='20px'
+        color='grey'
+      >
+        {'() => { }'}
+      </Text>
       <Stack
         spacing={4}
         w={{ base: '80%', md: '60%' }}
@@ -40,9 +43,9 @@ export const Hero: React.FC = ({ ...rest }) => {
           w='100%'
           textAlign={['left', 'left', 'left', 'left']}
         >
-          Hey I'm{' '}
+          Hello there! I'm{' '}
           <Text as='span' color='tomato'>
-            Joemel
+            Joemel.
           </Text>
         </Heading>
         <Heading
@@ -55,20 +58,34 @@ export const Hero: React.FC = ({ ...rest }) => {
           textAlign='left'
           w={{ lg: '70%' }}
         >
-          a full stack developer with 2 years of experience.
+          A Full Stack Developer.
         </Heading>
-        <Button
-          background='tomato'
-          borderRadius='0'
-          width={{ xs: 'full', sm: 'full', md: 'unset' }}
-          py='4'
-          px='4'
-          m='2'
-          lineHeight='1'
-          size='md'
-        >
-          Know More
-        </Button>
+        <Flex dir='row'>
+          <Button
+            background='tomato'
+            borderRadius='0'
+            width={{ xs: 'full', sm: 'full', md: 'unset' }}
+            py='4'
+            px='4'
+            m='2'
+            lineHeight='1'
+            size='md'
+          >
+            Know More
+          </Button>
+          <Button
+            background='tomato'
+            borderRadius='0'
+            width={{ xs: 'full', sm: 'full', md: 'unset' }}
+            py='4'
+            px='4'
+            m='2'
+            lineHeight='1'
+            size='md'
+          >
+            Resume
+          </Button>
+        </Flex>
         <Text
           fontSize='xs'
           mt={2}
