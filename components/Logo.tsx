@@ -9,7 +9,7 @@ interface Props {
 export const Logo: React.FC<Props> = (props) => {
   return (
     <Box {...props}>
-      <Text letterSpacing='4px' fontSize='2.5em' fontWeight='bold'>
+      <Text letterSpacing='4px' fontSize={['1em', '2.5em']} fontWeight='bold'>
         {' '}
         JOMS
         <Text as='span' color='red'>
