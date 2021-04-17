@@ -11,24 +11,25 @@ import {
 } from '@chakra-ui/react';
 
 import { IntroLine } from './IntroLine';
-
 export const About: React.FC = () => {
   return (
     <Container maxW={'8xl'} minH='100%' py={32}>
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+      <Flex direction='row' alignItems='center' mb='3rem'>
+        <IntroLine w='3rem' h='1' />
+        <Heading
+          HeadingTransform={'uppercase'}
+          fontWeight={600}
+          fontSize={'md'}
+          rounded={'md'}
+        >
+          About
+        </Heading>
+      </Flex>
+      <Stack
+        spacing={10}
+        direction={['column-reverse', 'column-reverse', 'row']}
+      >
         <Stack spacing='20'>
-          <Flex direction='row' alignItems='center'>
-            <IntroLine w='3rem' h='1' />
-            <Heading
-              HeadingTransform={'uppercase'}
-              fontWeight={600}
-              fontSize={'md'}
-              alignSelf={'flex-start'}
-              rounded={'md'}
-            >
-              About
-            </Heading>
-          </Flex>
           <Heading
             lineHeight={1.1}
             fontSize={{ base: '2xl', sm: '3xl', md: '4xl', lg: '5xl' }}
@@ -92,15 +93,15 @@ export const About: React.FC = () => {
         <Flex alignItems='center' p='3rem'>
           <Image
             maxWidth='500'
-            width='500'
-            height='500'
+            width='100%'
+            height='auto'
             borderRadius='full'
             margin='auto'
             alt={'Joemel Bituin'}
             src={'joemel.jpg'}
           />
         </Flex>
-      </SimpleGrid>
+      </Stack>
     </Container>
   );
 };

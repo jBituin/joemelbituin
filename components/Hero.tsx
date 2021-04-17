@@ -31,7 +31,7 @@ export const Hero: React.FC = ({ ...rest }) => {
       </Text>
       <Stack
         spacing={4}
-        w={{ base: '80%', md: '60%' }}
+        w={{ base: '90%', md: '100%' }}
         align={['center', 'center', 'flex-start', 'flex-start']}
       >
         <Heading
@@ -56,7 +56,7 @@ export const Hero: React.FC = ({ ...rest }) => {
           fontWeight='normal'
           lineHeight={1.5}
           textAlign='left'
-          w={{ lg: '70%' }}
+          w='100%'
         >
           A Full Stack Developer.
         </Heading>
