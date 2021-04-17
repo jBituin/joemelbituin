@@ -31,7 +31,7 @@ export const Connect: React.FC = () => {
             lineHeight={1.1}
             fontSize={{ base: '2xl', sm: '3xl', md: '4xl', lg: '5xl' }}
           >
-            Interested in working with me or perhaps just talk ?
+            Interested in working with me or perhaps just talk?
           </Heading>
           <Stack spacing={20}>
             <HStack align={'top'} spacing={4}>
