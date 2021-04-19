@@ -20,8 +20,8 @@ export const Navbar: React.FC<Props> = (props) => {
         w='200px'
         color={['black', 'black', 'primary.500', 'primary.500']}
       />
-      <MenuToggle toggle={toggle} isOpen={isOpen} />
-      <MenuLinks isOpen={isOpen} />
+      {/* <MenuToggle toggle={toggle} isOpen={isOpen} /> */}
+      {/* <MenuLinks isOpen={isOpen} /> */}
     </NavbarContainer>
   );
 };
