@@ -65,20 +65,20 @@ export const Hero: React.FC = ({ ...rest }) => {
           >
             Know More
           </Button>
-          <Button
-            background='tomato'
-            borderRadius='0'
-            width={{ xs: 'full', sm: 'full', md: 'unset' }}
-            py='4'
-            px='4'
-            m='2'
-            lineHeight='1'
-            size='md'
-          >
-            <Link target='_blank' href='joemel-bituin.pdf'>
+          <Link target='_blank' href='joemel-bituin.pdf'>
+            <Button
+              background='tomato'
+              borderRadius='0'
+              width={{ xs: 'full', sm: 'full', md: 'unset' }}
+              py='4'
+              px='4'
+              m='2'
+              lineHeight='1'
+              size='md'
+            >
               Resume
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </Flex>
         <Text
           fontSize='xs'
