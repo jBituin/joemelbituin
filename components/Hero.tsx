@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  Box,
-  Button,
-  Flex,
-  Image,
-  Heading,
-  Stack,
-  Text,
-} from '@chakra-ui/react';
+import { Button, Flex, Link, Heading, Stack, Text } from '@chakra-ui/react';
 
 export const Hero: React.FC = ({ ...rest }) => {
   return (
@@ -58,7 +50,7 @@ export const Hero: React.FC = ({ ...rest }) => {
           textAlign='left'
           w='100%'
         >
-          A Full Stack Developer.
+          A Full Stack Javascript Developer.
         </Heading>
         <Flex dir='row'>
           <Button
@@ -83,7 +75,9 @@ export const Hero: React.FC = ({ ...rest }) => {
             lineHeight='1'
             size='md'
           >
-            Resume
+            <Link target='_blank' href='joemel-bituin.pdf'>
+              Resume
+            </Link>
           </Button>
         </Flex>
         <Text
