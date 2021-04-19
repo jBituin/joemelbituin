@@ -8,12 +8,17 @@ import {
   Stack,
   HStack,
   VStack,
+  Button,
 } from '@chakra-ui/react';
-
 import { IntroLine } from './IntroLine';
-export const About: React.FC = () => {
+
+interface AboutProps {
+  scrollInto: (elementId: string) => void;
+}
+export const About: React.FC<AboutProps> = ({ children, ...props }) => {
+  const { scrollInto } = props;
   return (
-    <Container maxW={'8xl'} minH='100%' py={32}>
+    <Container maxW={'8xl'} minH='100%' py={32} {...props} id='about'>
       <Flex direction='row' alignItems='center' mb='3rem'>
         <IntroLine w='3rem' h='1' />
         <Heading
@@ -88,6 +93,20 @@ export const About: React.FC = () => {
                 </VStack>
               </VStack>
             </HStack>
+            <Button
+              background='tomato'
+              borderRadius='0'
+              width={{ xs: 'full', sm: 'full', md: 'unset' }}
+              py='4'
+              px='4'
+              m='2'
+              lineHeight='1'
+              size='md'
+              maxW='7.5em'
+              onClick={() => scrollInto('connect')}
+            >
+              Get in touch
+            </Button>
           </Stack>
         </Stack>
         <Flex alignItems='center' p='3rem'>

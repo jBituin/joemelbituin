@@ -1,7 +1,14 @@
 import React from 'react';
+import NextLink from 'next/link';
 import { Button, Flex, Link, Heading, Stack, Text } from '@chakra-ui/react';
 
-export const Hero: React.FC = ({ ...rest }) => {
+interface HeroProps {
+  scrollInto: (elementId: string) => void;
+}
+
+export const Hero: React.FC<HeroProps> = ({ ...props }) => {
+  const { scrollInto } = props;
+
   return (
     <Flex
       align='center'
@@ -10,7 +17,7 @@ export const Hero: React.FC = ({ ...rest }) => {
       wrap='nowrap'
       width='100%'
       my='4rem'
-      {...rest}
+      {...props}
     >
       <Text
         fontSize={['100px', '200px', '300px']}
@@ -53,6 +60,7 @@ export const Hero: React.FC = ({ ...rest }) => {
           A Full Stack Javascript Developer.
         </Heading>
         <Flex dir='row'>
+          {/* <NextLink href='#about' scroll> */}
           <Button
             background='tomato'
             borderRadius='0'
@@ -62,9 +70,11 @@ export const Hero: React.FC = ({ ...rest }) => {
             m='2'
             lineHeight='1'
             size='md'
+            onClick={() => scrollInto('about')}
           >
             Know More
           </Button>
+          {/* </NextLink> */}
           <Link target='_blank' href='joemel-bituin.pdf'>
             <Button
               background='tomato'

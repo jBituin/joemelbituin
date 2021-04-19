@@ -12,7 +12,7 @@ import { IntroLine } from './IntroLine';
 
 export const Connect: React.FC = () => {
   return (
-    <Container maxW={'8xl'} minH='100%' py={32}>
+    <Container maxW={'8xl'} minH='100%' py={32} id='connect'>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         <Stack spacing='20'>
           <Flex direction='row' alignItems='center'>
