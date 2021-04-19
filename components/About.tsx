@@ -17,7 +17,7 @@ export const About: React.FC = () => {
       <Flex direction='row' alignItems='center' mb='3rem'>
         <IntroLine w='3rem' h='1' />
         <Heading
-          HeadingTransform={'uppercase'}
+          textTransform={'uppercase'}
           fontWeight={600}
           fontSize={'md'}
           rounded={'md'}

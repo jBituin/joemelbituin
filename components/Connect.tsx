@@ -18,7 +18,7 @@ export const Connect: React.FC = () => {
           <Flex direction='row' alignItems='center'>
             <IntroLine w='3rem' h='1' />
             <Heading
-              HeadingTransform={'uppercase'}
+              textTransform={'uppercase'}
               fontWeight={600}
               fontSize={'md'}
               alignSelf={'flex-start'}
