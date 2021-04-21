@@ -4,7 +4,7 @@ import { FiHeart } from 'react-icons/fi';
 export const Footer: React.FC = ({ ...rest }) => {
   return (
     <Box
-      maxHeight={60}
+      w='100%'
       display='flex'
       justifyContent='center'
       alignItems='center'
