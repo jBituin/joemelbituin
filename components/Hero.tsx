@@ -1,5 +1,4 @@
 import React from 'react';
-import NextLink from 'next/link';
 import { Button, Flex, Link, Heading, Stack, Text } from '@chakra-ui/react';
 
 interface HeroProps {
@@ -8,6 +7,7 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ ...props }) => {
   const { scrollInto } = props;
+  const arrowFunction = '() => {}';
 
   return (
     <Flex
@@ -17,16 +17,21 @@ export const Hero: React.FC<HeroProps> = ({ ...props }) => {
       wrap='nowrap'
       width='100%'
       my='4rem'
+      backgroundImage={{ xl: 'url(../development.svg)' }}
+      backgroundRepeat='no-repeat'
+      backgroundPosition={'right bottom 5.5rem'}
+      backgroundSize='50%'
+      minH={{ md: '600px', lg: '750px' }}
       {...props}
     >
       <Text
-        fontSize={['100px', '200px', '300px']}
+        fontSize={['90px', '150px', '300px']}
         position='fixed'
-        opacity='0.1'
-        mt='20px'
+        top={{ lg: 0 }}
         color='grey'
+        opacity='0.1'
       >
-        {'() => { }'}
+        {arrowFunction}
       </Text>
       <Stack
         spacing={4}
@@ -60,7 +65,6 @@ export const Hero: React.FC<HeroProps> = ({ ...props }) => {
           A Full Stack Javascript Developer.
         </Heading>
         <Flex dir='row'>
-          {/* <NextLink href='#about' scroll> */}
           <Button
             background='tomato'
             borderRadius='0'
@@ -74,7 +78,6 @@ export const Hero: React.FC<HeroProps> = ({ ...props }) => {
           >
             Know More
           </Button>
-          {/* </NextLink> */}
           <Link target='_blank' href='joemel-bituin.pdf'>
             <Button
               background='tomato'
@@ -90,13 +93,6 @@ export const Hero: React.FC<HeroProps> = ({ ...props }) => {
             </Button>
           </Link>
         </Flex>
-        <Text
-          fontSize='xs'
-          mt={2}
-          textAlign='center'
-          color='primary.800'
-          opacity='0.6'
-        ></Text>
       </Stack>
     </Flex>
   );
