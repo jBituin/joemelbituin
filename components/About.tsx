@@ -11,6 +11,7 @@ import {
   Button,
 } from '@chakra-ui/react';
 import { IntroLine } from './IntroLine';
+import { Section } from './Section';
 
 interface AboutProps {
   scrollInto: (elementId: string) => void;
@@ -18,37 +19,17 @@ interface AboutProps {
 export const About: React.FC<AboutProps> = ({ children, ...props }) => {
   const { scrollInto } = props;
   return (
-    <Container maxW={'8xl'} minH='100%' py={32} {...props} id='about'>
-      <Flex direction='row' alignItems='center' mb='3rem'>
-        <IntroLine w='3rem' h='1' />
-        <Heading
-          textTransform={'uppercase'}
-          fontWeight={600}
-          fontSize={'md'}
-          rounded={'md'}
-        >
-          About
-        </Heading>
-      </Flex>
+    <Section
+      id='about'
+      title={'About'}
+      description={'Get a closer look at who I am'}
+      {...props}
+    >
       <Stack
         spacing={10}
         direction={['column-reverse', 'column-reverse', 'row']}
       >
         <Stack spacing='20'>
-          <Heading
-            lineHeight={1.1}
-            fontSize={{ base: '2xl', sm: '3xl', md: '4xl', lg: '5xl' }}
-          >
-            Get a closer look{' '}
-            <Text
-              as={'span'}
-              bgGradient='linear(to-r, red.400,pink.400)'
-              bgClip='text'
-            >
-              at{' '}
-            </Text>
-            who I am.
-          </Heading>
           <Stack spacing={20}>
             <HStack align={'top'} spacing={4}>
               <VStack align={'start'}>
@@ -64,8 +45,8 @@ export const About: React.FC<AboutProps> = ({ children, ...props }) => {
                   </Text>
                   <Text as='p'>
                     I enjoy creating high-quality software products with a
-                    complex logic behind it. My main technology stack includes
-                    Vue, React, and Node
+                    complex logic behind it. My main <br />
+                    technology stack includes Vue, React, and Node
                   </Text>
                   <Text as='p'>
                     I enjoy reading novels, watch movies, and listen to music.
@@ -109,7 +90,11 @@ export const About: React.FC<AboutProps> = ({ children, ...props }) => {
             </Button>
           </Stack>
         </Stack>
-        <Flex alignItems='center' p='3rem'>
+        <Flex
+          alignItems='center'
+          p='3rem'
+          transform={{ lg: 'translate(8rem, -8rem)' }}
+        >
           <Image
             maxWidth='500'
             width='100%'
@@ -121,6 +106,6 @@ export const About: React.FC<AboutProps> = ({ children, ...props }) => {
           />
         </Flex>
       </Stack>
-    </Container>
+    </Section>
   );
 };
