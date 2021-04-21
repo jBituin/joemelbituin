@@ -1,4 +1,3 @@
-import { createRef, useRef } from 'react';
 import Head from 'next/head';
 import { Layout } from '../components/Layout';
 import { Hero } from '../components/Hero';
@@ -10,6 +9,7 @@ export default function Home() {
     let element = document.getElementById(elementId);
     element && element.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
+
   return (
     <Layout>
       <Head>
