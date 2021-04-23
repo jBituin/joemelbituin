@@ -1,15 +1,10 @@
-import { useAnimation } from 'framer-motion';
 import React, { useEffect } from 'react';
+import { useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { SectionHeader } from './SectionHeader';
-import { MotionBox } from './MotionBox';
+import { SectionHeader } from './libs/SectionHeader';
+import { MotionBox } from 'components';
+import { Props } from './props';
 
-interface Props {
-  title: string;
-  description: string;
-  children: React.ReactNode;
-  [key: string]: any;
-}
 export const Section: React.FC<Props> = ({
   title,
   description,
