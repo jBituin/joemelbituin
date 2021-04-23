@@ -1,11 +1,7 @@
 import React from 'react';
-import { Box, Flex, Heading, Stack, VStack } from '@chakra-ui/react';
-import { IntroLine } from './IntroLine';
-
-interface Props {
-  title: string;
-  description: string;
-}
+import { Flex, Heading, Stack } from '@chakra-ui/react';
+import { IntroLine } from 'components';
+import { Props } from './props';
 
 export const SectionHeader: React.FC<Props> = ({
   title,
