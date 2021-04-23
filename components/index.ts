@@ -9,5 +9,4 @@ export * from './Layout';
 export * from './Logo';
 export * from './MotionBox';
 export * from './MotionText';
-export * from './Project';
 export * from './Section';
