@@ -1,13 +1,4 @@
-import {
-  Container,
-  SimpleGrid,
-  Flex,
-  Heading,
-  Text,
-  Stack,
-  HStack,
-  VStack,
-} from '@chakra-ui/react';
+import { SimpleGrid, Text, Stack, HStack, VStack } from '@chakra-ui/react';
 import { Section } from './Section';
 
 export const Connect: React.FC = () => {
