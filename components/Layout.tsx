@@ -8,6 +8,7 @@ export const Layout: React.FC = ({ children, ...rest }) => (
     align='center'
     maxW={{ xl: '1400px' }}
     m='0 auto'
+    p={['1rem', '2rem', '']}
     w='100%'
     {...rest}
   >
