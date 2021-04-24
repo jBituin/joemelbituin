@@ -16,14 +16,17 @@ import { Section } from './Section';
 interface AboutProps {
   scrollInto: (elementId: string) => void;
 }
-export const About: React.FC<AboutProps> = ({ children, ...props }) => {
-  const { scrollInto } = props;
+export const About: React.FC<AboutProps> = ({
+  children,
+  scrollInto,
+  ...rest
+}) => {
   return (
     <Section
       id='about'
       title={'About'}
       description={'Get a closer look at who I am'}
-      {...props}
+      {...rest}
     >
       <Stack
         spacing={10}
