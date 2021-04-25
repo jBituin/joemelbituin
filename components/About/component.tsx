@@ -1,6 +1,4 @@
 import {
-  Container,
-  SimpleGrid,
   Image,
   Flex,
   Heading,
@@ -10,17 +8,11 @@ import {
   VStack,
   Button,
 } from '@chakra-ui/react';
-import { IntroLine } from './IntroLine';
-import { Section } from './Section';
+import { IntroLine } from 'components';
+import { Section } from 'components';
+import { Props } from './props';
 
-interface AboutProps {
-  scrollInto: (elementId: string) => void;
-}
-export const About: React.FC<AboutProps> = ({
-  children,
-  scrollInto,
-  ...rest
-}) => {
+export const About: React.FC<Props> = ({ children, scrollInto, ...rest }) => {
   return (
     <Section
       id='about'
