@@ -5,8 +5,7 @@ interface HeroProps {
   scrollInto: (elementId: string) => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ ...props }) => {
-  const { scrollInto } = props;
+export const Hero: React.FC<HeroProps> = ({ scrollInto, ...rest }) => {
   const arrowFunction = '() => {}';
 
   return (
@@ -22,7 +21,7 @@ export const Hero: React.FC<HeroProps> = ({ ...props }) => {
       backgroundPosition={'right bottom 5.5rem'}
       backgroundSize='50%'
       minH={{ md: '600px', lg: '750px' }}
-      {...props}
+      {...rest}
     >
       <Text
         fontSize={['90px', '150px', '300px']}
