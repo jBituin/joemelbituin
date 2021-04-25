@@ -1,11 +1,8 @@
 import React from 'react';
 import { Button, Flex, Link, Heading, Stack, Text } from '@chakra-ui/react';
+import { Props } from './props';
 
-interface HeroProps {
-  scrollInto: (elementId: string) => void;
-}
-
-export const Hero: React.FC<HeroProps> = ({ scrollInto, ...rest }) => {
+export const Hero: React.FC<Props> = ({ scrollInto, ...rest }) => {
   const arrowFunction = '() => {}';
 
   return (
