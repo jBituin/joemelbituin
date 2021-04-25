@@ -1,10 +1,6 @@
 import React from 'react';
 import { Box, Text } from '@chakra-ui/react';
-
-interface Props {
-  w: string;
-  color: string[];
-}
+import { Props } from './props';
 
 export const Logo: React.FC<Props> = (props) => {
   return (

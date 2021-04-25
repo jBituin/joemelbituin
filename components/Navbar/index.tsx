@@ -1,5 +1,5 @@
 import { NavbarContainer } from './NavbarContainer';
-import { Logo } from '../Logo';
+import { Logo } from 'components';
 import { MenuToggle } from './MenuToggle';
 import { MenuLinks } from './MenuLinks';
 import { useState } from 'react';
