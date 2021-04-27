@@ -1,6 +1,6 @@
 import { Flex } from '@chakra-ui/react';
-import { Navbar } from './Navbar';
-import { Footer } from './Footer';
+import { Navbar } from 'components';
+import { Footer } from 'components';
 
 export const Layout: React.FC = ({ children, ...rest }) => (
   <Flex
