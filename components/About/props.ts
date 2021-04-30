@@ -1,3 +1,1 @@
-export interface Props {
-  scrollInto: (elementId: string) => void;
-}
+export interface Props {}

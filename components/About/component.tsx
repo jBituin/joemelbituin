@@ -12,7 +12,7 @@ import { IntroLine } from 'components';
 import { Section } from 'components';
 import { Props } from './props';
 
-export const About: React.FC<Props> = ({ children, scrollInto, ...rest }) => {
+export const About: React.FC<Props> = ({ children, ...rest }) => {
   return (
     <Section
       id='about'
@@ -70,6 +70,7 @@ export const About: React.FC<Props> = ({ children, scrollInto, ...rest }) => {
               </VStack>
             </HStack>
             <Button
+              as='a'
               background='tomato'
               borderRadius='0'
               width={{ xs: 'full', sm: 'full', md: 'unset' }}
@@ -79,7 +80,7 @@ export const About: React.FC<Props> = ({ children, scrollInto, ...rest }) => {
               lineHeight='1'
               size='md'
               maxW='7.5em'
-              onClick={() => scrollInto('connect')}
+              href='#connect'
             >
               Get in touch
             </Button>

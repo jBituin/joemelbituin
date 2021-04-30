@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Flex, Link, Heading, Stack, Text } from '@chakra-ui/react';
 import { Props } from './props';
 
-export const Hero: React.FC<Props> = ({ scrollInto, ...rest }) => {
+export const Hero: React.FC<Props> = ({ ...rest }) => {
   const arrowFunction = '() => {}';
 
   return (
@@ -62,6 +62,7 @@ export const Hero: React.FC<Props> = ({ scrollInto, ...rest }) => {
         </Heading>
         <Flex dir='row'>
           <Button
+            as='a'
             background='tomato'
             borderRadius='0'
             width={{ xs: 'full', sm: 'full', md: 'unset' }}
@@ -70,7 +71,7 @@ export const Hero: React.FC<Props> = ({ scrollInto, ...rest }) => {
             m='2'
             lineHeight='1'
             size='md'
-            onClick={() => scrollInto('about')}
+            href='#about'
           >
             Know More
           </Button>
