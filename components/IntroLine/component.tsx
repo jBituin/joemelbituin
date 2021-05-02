@@ -1,11 +1,6 @@
 import React from 'react';
 import { Box } from '@chakra-ui/react';
 
-interface Props {
-  w?: string;
-  h?: string;
-}
-
 export const IntroLine: React.FC<Props> = (props) => {
   return (
     <Box transform='none' transformOrigin='0% 50% 0px'>
