@@ -1,7 +1,7 @@
 import React from 'react';
 import { Stack, Box } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
-import MenuItem from './MenuItem';
+import { MenuItem } from '../MenuItem';
 
 interface Props {
   isOpen: boolean;
