@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box } from '@chakra-ui/react';
+import { Props } from './props';
 
 export const IntroLine: React.FC<Props> = (props) => {
   return (
