@@ -26,6 +26,7 @@ export const Hero: React.FC<Props> = ({ ...rest }) => {
         top={{ lg: 0 }}
         color='grey'
         opacity='0.1'
+        zIndex='-1'
       >
         {arrowFunction}
       </Text>
