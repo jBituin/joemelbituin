@@ -1,5 +1,6 @@
 import { SimpleGrid, Text, Stack, HStack, VStack } from '@chakra-ui/react';
 import { Section } from 'components';
+import Link from 'next/link';
 
 export const Connect: React.FC = () => {
   return (
@@ -18,7 +19,14 @@ export const Connect: React.FC = () => {
                     Feel free to drop me a message if you have some interesting
                     offer or you want to hang out.
                   </Text>
-                  <Text as='p'>Send an email to: bituinjoemel@gmail.com</Text>
+                  <Text as='p'>
+                    Send an email to:{' '}
+                    <Link href='mailto:bituinjoemel@gmail.com'>
+                      <Text as='u' color='tomato' cursor='pointer'>
+                        bituinjoemel@gmail.com
+                      </Text>
+                    </Link>
+                  </Text>
                 </VStack>
               </VStack>
             </HStack>
